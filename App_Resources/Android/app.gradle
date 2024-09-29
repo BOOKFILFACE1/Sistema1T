@@ -1,0 +1,19 @@
+// You can add your native dependencies here
+dependencies {
+//  implementation 'androidx.multidex:multidex:2.0.1'
+}
+
+android {
+    defaultConfig {
+        // ...
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        dexOptions {
+            javaMaxHeapSize "4g"
+        }
+    }
+}
+
